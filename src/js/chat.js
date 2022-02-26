@@ -1,5 +1,5 @@
 "use strict"
-const socket = io('/');
+const socket = io();
 
 const nickname = document.querySelector("#nickname");
 const chatList = document.querySelector(".chatting-list");
@@ -11,7 +11,7 @@ let num_count
 socket.on('usercount', (count) => {
   num_count = count;
   var userCounter = document.getElementById('usercount');
-  userCounter.innerText = "현재 " + (count-1) + "명이 서버에 접속해있습니다.";
+  userCounter.innerText = "현재 " + count + "명이 서버에 접속해있습니다.";
 });
 
 chatInput.addEventListener("keypress", (event)=>{
