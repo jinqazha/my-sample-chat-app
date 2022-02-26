@@ -1,5 +1,5 @@
 "use strict"
-const socket = io('/',{transports: ['websocket'],upgrade:false});
+const socket = io('/');
 
 const nickname = document.querySelector("#nickname");
 const chatList = document.querySelector(".chatting-list");
